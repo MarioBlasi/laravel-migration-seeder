@@ -1,17 +1,30 @@
 <header>
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
-            Accordion Item #1
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">laravel-migration-seeder</a>
+          <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleMainNav" 
+          aria-controls="collapsibleMainNav" 
+          aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
           </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            This is the first item's accordion body.
+
+          <div class="collapse navbar-collapse" id="collapsibleMainNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link {{ Route::currentRouteName() === 'home' ? 'bg-dark text-white' : ''}}" href="{{route('home')}}"
+                aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link {{ Route::currentRouteName() === 'about' ? 'bg-dark text-white' : ''}}" href="{{route('about')}}">About</a>  
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link {{ Route::currentRouteName() === 'contacts' ? 'bg-dark text-white' : ''}}" href="{{route('contacts')}}">Contacts</a>  
+              </li>
+            </ul>
           </div>
+          
         </div>
-      </div>
-      
-    </div>
+      </nav>
 </header>
